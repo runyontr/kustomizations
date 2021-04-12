@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: services
+  labels:
+    environment: ${cluster_env:=dev}
+    region: "${cluster_region:=us-west1}"
