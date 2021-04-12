@@ -5,4 +5,17 @@ resources:
   - deployment.yaml
   - service.yaml
   - virtualservice.yaml
-
+vars:
+- name: domain
+  objref:
+    kind: ConfigMap
+    name: parameters
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.domain
+configMapGenerator:
+- envs:
+  - params.env
+  name: parameters
+configurations:
+- params.yaml

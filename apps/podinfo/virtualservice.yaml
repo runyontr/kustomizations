@@ -6,7 +6,7 @@ spec:
   gateways:
   - "istio-system/main"
   hosts:
-  - podinfo.$(domain)
+  - "podinfo.$(domain)"
   http:
     - route:
         - destination:
