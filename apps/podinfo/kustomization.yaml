@@ -9,7 +9,7 @@ vars:
 - name: domain
   objref:
     kind: ConfigMap
-    name: parameters
+    name: cluster-vars
     apiVersion: v1
   fieldref:
     fieldpath: data.domain
